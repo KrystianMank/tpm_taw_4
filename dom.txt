@@ -1,0 +1,4 @@
+- Utworzyć nowe repozytorium o nazwie PAW4
+- Sklonować do domowego komputera
+- Napisać prosty kod w Python wyznaczający pole koła i obwód koła dla pobranego od użytkownika promienia r
+- Uplodować plik do zdalnego repozytorium
