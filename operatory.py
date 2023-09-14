@@ -24,3 +24,5 @@ print(f"Suma = {suma}\n rożnica = {roznica}\n \
         potega = {potega} pierwaistek = {pierwiastek}\n \
             cześć całkowita z dzieleniia = {czesc_calkowita_dzielenia}\n \
                 reszta z dzielenia = {reszta_z_dzielenia}")
+
+print("Dodano koniec")
