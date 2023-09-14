@@ -26,3 +26,4 @@ print(f"Suma = {suma}\n rożnica = {roznica}\n \
                 reszta z dzielenia = {reszta_z_dzielenia}")
 
 print("Dodano koniec")
+print("Zmiana w repozytorium")
