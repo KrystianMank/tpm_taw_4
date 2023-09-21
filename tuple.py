@@ -17,16 +17,23 @@ Krotki
 
 #=========================================
 
-x, y, _= 3, 4, 5
-print(x)
-print(y)
+# x, y, _= 3, 4, 5
+# print(x)
+# print(y)
 
-#flip/flop
-x,y=y,x
-print(x)
-print(y)
+# #flip/flop
+# x,y=y,x
+# print(x)
+# print(y)
 
+#wersja1
+# tuple=(4,3,7,1)
+# tuple=list(tuple)
+# tuple.sort()
+# print(tuple)
 
-
+#wersja2
+tupla=(4,3,7,1)
+print(tuple(sorted(list(tupla),reverse=False)))
 
 
