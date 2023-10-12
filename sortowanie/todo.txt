@@ -1,0 +1,4 @@
+-zacząć menu
+-dekoratory
+-bubble sort
+-insert sort
