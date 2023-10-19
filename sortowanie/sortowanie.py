@@ -133,30 +133,31 @@ def f_main():
             wybor=input("Wybierz metodę sortowania: ")
         if wybor in ('b','i','s','q'):
             posort=[]
+            liczby1=liczby_g.copy()
             if wybor == 'b':
                 print("Bubblesort")
-                liczby1=liczby_g.copy()
+                
                 show(liczby1)
                 posort, timer=bubblesort(liczby1)
                 show(posort,False,timer)
                 
             elif wybor=='i':
                 print("Insertsort")
-                liczby1=liczby_g.copy()
+                
                 show(liczby1)
                 posort, timer=insertsort(liczby1)
                 show(posort,False,timer)
                 
             elif wybor=='s':
                 print("Selection sort")
-                liczby1=liczby_g.copy()
+                
                 show(liczby1)
                 posort, timer=selectionsort(liczby1)
                 show(posort,False,timer)
                 
             elif wybor=='q':
                 print("Quicksort")
-                liczby1=liczby_g.copy()
+                
                 show(liczby1)
                 posort, timer=quicksort_start(liczby1)
                 show(posort,False,timer)
