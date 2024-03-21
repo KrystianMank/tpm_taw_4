@@ -47,6 +47,7 @@ class dbConnection:
         curs = self.conn.cursor()
         try:
             curs.execute(query, args)
+            self.commit()
         except Exception as ex:
             self.conn.rollback()
             curs.close()
@@ -61,6 +62,6 @@ class dbConnection:
 
     def fetchall(self, query, args=None):
         curs = self.execute(query, args)
-        rows = self.fetchall()
+        rows = curs.fetchall()
         curs.close()
         return rows

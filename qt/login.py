@@ -12,7 +12,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtGui import QPixmap
 import hashlib
 from db_conn import dbConnection
-from drugie import Ui_FormMainWindow
+from mess import messagebox
 
 class Ui_FormLogin(object):
     def setupUi(self, FormLogin):
@@ -54,25 +54,11 @@ class Ui_FormLogin(object):
         QtCore.QMetaObject.connectSlotsByName(FormLogin)
         self.pushButtonLogin.clicked.connect(self.zaloguj)
 
-    def messagebox(self,title,message, icon, button):
-        mess = QtWidgets.QMessageBox()
-        mess.setWindowTitle(title)
-        mess.setText(message)
-        if icon == "Information":
-            mess.setIcon(QtWidgets.QMessageBox.Icon.Information)
-        elif icon == "Warning":
-            mess.setIcon(QtWidgets.QMessageBox.Icon.Warning)
-
-        if button == "Ok":
-            mess.setStandardButtons(QtWidgets.QMessageBox.Ok)
-        elif button =="Cancel":
-            mess.setStandardButtons(QtWidgets.QMessageBox.Cancel)
-        mess.exec_()
     
     def OpenWindow(self):
         FormLogin.hide()
-        self.window = QtWidgets.QMainWindow()
-        self.ui = Ui_FormMainWindow()
+        self.window = QtWidgets.QWidget()
+        self.ui = Ui_FormList()
         self.ui.setupUi(self.window)
         self.window.show()
 
@@ -87,10 +73,10 @@ class Ui_FormLogin(object):
         row = db.fetchone(query,params)
         db.close()
         if row[0] == 1:
-            self.messagebox("Loged in",f"You are logged in as {email}.","Information","Ok")
+            messagebox("Loged in",f"You are logged in as {email}.","Information","Ok")
             self.OpenWindow()
         else:
-            self.messagebox("Login problem", "Your login or email is not correct.","Warning","Cancel")
+            messagebox("Login problem", "Your login or email is not correct.","Warning","Cancel")
 
 
     def retranslateUi(self, FormLogin):
